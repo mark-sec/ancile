@@ -13,6 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import {logo} from "../assets";
 import ToggleColorMode from "./ToggleColorMode";
+import { Link } from 'react-router-dom'; // Import Link from React Router
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -36,6 +37,9 @@ export default function AppAppBar({mode,toggleColorMode}:AppAppBarProps) {
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
+  };
+  const handleSignIn = () => {
+    window.location.href = 'https://olisa14.github.io/projectxxx/';
   };
 
   return (
@@ -77,10 +81,10 @@ export default function AppAppBar({mode,toggleColorMode}:AppAppBarProps) {
                 mode={mode}
                 toggleColorMode={toggleColorMode}
             />
-            <Button color="primary" variant="text" size="small">
+            <Button color="primary" variant="text" size="small" onClick={handleSignIn}>
               Sign in
             </Button>
-            <Button color="primary" variant="contained" size="small">
+            <Button color="primary" variant="contained" size="small" onClick={handleSignIn}>
               Sign up
             </Button>
           </Box>
@@ -102,17 +106,17 @@ export default function AppAppBar({mode,toggleColorMode}:AppAppBarProps) {
                   </IconButton>
                 </Box>
                 <Divider sx={{ my: 3 }} />
-                <MenuItem>Features</MenuItem>
-                <MenuItem>How it works</MenuItem>
-                <MenuItem>Pricing</MenuItem>
-                <MenuItem>FAQ</MenuItem>
+                <MenuItem component={Link} to="#features">Features</MenuItem>
+                <MenuItem component={Link} to="#how_it_works">How it works</MenuItem>
+                <MenuItem component={Link} to="#pricing">Pricing</MenuItem>
+                <MenuItem component={Link} to="#faq">FAQ</MenuItem>
                 <MenuItem>
-                  <Button color="primary" variant="contained" fullWidth>
+                  <Button color="primary" variant="contained" fullWidth onClick={handleSignIn}>
                     Sign up
                   </Button>
                 </MenuItem>
                 <MenuItem>
-                  <Button color="primary" variant="outlined" fullWidth>
+                  <Button color="primary" variant="outlined" fullWidth onClick={handleSignIn}>
                     Sign in
                   </Button>
                 </MenuItem>
