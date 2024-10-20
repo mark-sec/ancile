@@ -98,7 +98,7 @@ export default function Hero() {
               width: { sm: '100%', md: '80%' },
             }}
           >
-            Our innovative trade loss insurance protects traders when they have a bad day. Trading will never be the same again..
+              Our trade loss insurance empowers traders to navigate the ups and downs with ease. Elevate your trading experience!
           </Typography>
           <Stack
             direction={{ xs: 'column', sm: 'row' }}

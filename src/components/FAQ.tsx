@@ -17,8 +17,7 @@ const faqs = [
     answer: (
         <>
           No. Our users connect their brokerage accounts to our platform and trades directly on our platform. All trades are still executed at their broker.
-          <br/>
-          No. Our users connect their brokerage accounts to our platform and trades directly on our platform. All trades are still executed at their broker.
+
         </>
     ),
   },
@@ -26,8 +25,6 @@ const faqs = [
     question: 'What exactly do you cover?',
     answer: (
         <>
-          We reimburse 50% of trading losses incurred from the first seven trades in stocks and stock ETFs during regular market hours. The limit of coverage is determined by the level of coverage purchased.
-
           We reimburse 50% of trading losses incurred from the first seven trades in stocks and stock ETFs during regular market hours. The limit of coverage is determined by the level of coverage purchased.
         </>
     ),
@@ -38,7 +35,6 @@ const faqs = [
         <>
           At this time, coverage is only available for trades in stocks and stock ETFs. We are actively working to extend coverage to other asset classes.
 
-          At this time, coverage is only available for trades in stocks and stock ETFs. We are actively working to extend coverage to other asset classes.
         </>
     ),
   },
