@@ -41,6 +41,13 @@ export default function AppAppBar({mode,toggleColorMode}:AppAppBarProps) {
   const handleSignIn = () => {
     window.location.href = 'https://olisa14.github.io/projectxxx/';
   };
+  const handleNavigation = (section:string) => {
+    // Scroll to the specified section
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <AppBar
@@ -106,10 +113,12 @@ export default function AppAppBar({mode,toggleColorMode}:AppAppBarProps) {
                   </IconButton>
                 </Box>
                 <Divider sx={{ my: 3 }} />
-                <MenuItem component={Link} to="#features">Features</MenuItem>
-                <MenuItem component={Link} to="#how_it_works">How it works</MenuItem>
-                <MenuItem component={Link} to="#pricing">Pricing</MenuItem>
-                <MenuItem component={Link} to="#faq">FAQ</MenuItem>
+
+                <MenuItem onClick={() => handleNavigation('features')}>Features</MenuItem>
+                <MenuItem onClick={() => handleNavigation('how_it_works')}>How it works</MenuItem>
+                <MenuItem onClick={() => handleNavigation('pricing')}>Pricing</MenuItem>
+                <MenuItem onClick={() => handleNavigation('faq')}>FAQ</MenuItem>
+
                 <MenuItem>
                   <Button color="primary" variant="contained" fullWidth onClick={handleSignIn}>
                     Sign up
